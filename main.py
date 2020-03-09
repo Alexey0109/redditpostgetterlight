@@ -32,6 +32,7 @@ content_filter = None
 @bot.message_handler(content_types=['text'])
 def GetSub(message):
     try:
+        subreddit = message.text[1:]
         bot.send_message(message.chat.id, "Please, wait...")
         post = getPosts(subreddit)
         post_url = post.url
