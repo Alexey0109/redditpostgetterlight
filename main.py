@@ -21,7 +21,7 @@ def getPosts(sub):
     for submission in reddit.subreddit(sub).new(limit=25):
         urls[i] = submission
         i += 1
-    n = random.randint(0, 25)
+    n = random.randint(0, 24)
     if n == 25: n - 1
     print(n, end=': ')
     print(urls[n])
